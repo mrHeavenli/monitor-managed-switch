@@ -15,6 +15,6 @@ Modes:
 ## Does it work?
 Sometimes there is strange output, looking a bit like this:
 `./main.sh: 24: [: missing ]`
-You can check if the switch worked by using `wavemon`
+You can check if the switch worked by using `wavemon`.
 Switching sometimes takes a few moments to register, so be a little patient.
 If the change still hasn't been made, try running it again once or twice. If it doesn't work even then, please tell me.
