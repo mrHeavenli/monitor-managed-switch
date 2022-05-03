@@ -21,7 +21,7 @@ else
 	ifconfig $1 down 
 	
 	# Switches to selected mode
-	if [ $2 = 1]
+	if [ $2 = 1 ]
 	then
 		echo "iwconfig $1 mode managed"
 		iwconfig $1 mode managed
