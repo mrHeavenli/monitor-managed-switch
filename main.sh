@@ -1,5 +1,6 @@
 #!/bin/sh
 HELP="--help"
+# for interface in $(ip link show | grep --colour=never -Eo "[a-z0-9]{2,}:")
 if [ $1 = $HELP ]
 then
 	echo "$0 ADAPTER MODE"
@@ -10,7 +11,10 @@ then
 	echo "2: Monitor"
 	echo 
 	echo "Interfaces:"
-	ip link show
+	for interface in $(ip link show | grep --colour=never -Eo "[0-9]+: \w{2,}:")
+	do
+		echo $interface | grep --colour=never -Eo "[a-z0-9]{2,}"
+	done
 else
 	echo "Chosen adapter: $1"
 	echo "Chosen mode: $2"
@@ -32,7 +36,6 @@ else
 	        iwconfig $1 mode monitor
 	
 	else
-		# I used to have a error message here, but I kept on getting false errors
 		ifconfig $1 up
 		exit
 	fi	
