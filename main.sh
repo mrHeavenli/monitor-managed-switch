@@ -11,7 +11,7 @@ then
 	echo "2: Monitor"
 	echo 
 	echo "Interfaces:"
-	for interface in $(ip link show | grep --colour=never -Eo "[0-9]+: \w{2,}:")
+	for interface in $(ip link show | grep --colour=never -Eo "[0-9]+: \w{2,}")
 	do
 		echo $interface | grep --colour=never -Eo "[a-z0-9]{2,}"
 	done
