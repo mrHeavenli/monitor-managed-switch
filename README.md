@@ -1,3 +1,7 @@
+## THIS PROJECT IS NOW ARCHIVED
+I won't be working on this anymore, but its code lives on
+in [addr.changer](https://github.com/mrHeavenli/addr.changer), which has more features.
+
 # monitor-managed-switch
 Switches network adapter mode
 
